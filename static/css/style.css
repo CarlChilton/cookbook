@@ -84,9 +84,20 @@ body {
     margin-top: 10px;
     width: 100%;
 }
-#ingredientsList .form-control {
+#ingredientsList .form-control, #instructionsList .form-control {
     margin-bottom: 5px;
+}
+#ingredientsList label, #instructionsList label {
+    display: block;    
 }
 .stepLabel {
     font-size: 10px;
+}
+
+.addedInput {
+    width: 90%;
+    display: inline-block;
+}
+.removeInput {
+    float: right
 }
