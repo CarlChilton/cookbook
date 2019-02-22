@@ -1,0 +1,51 @@
+.panel-heading a {
+    font-weight: bold;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.recipe_name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.recipe_title {
+    
+}
+
+/* Suited for */
+
+.vegetarian::before {
+    content: "\f787";
+    color: orange;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.vegan::before {
+    content: "\f27d";
+    color: green;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.meat::before {
+    content: "\f7e5";
+    color: pink;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* Allergens */
+
+.dairy::before {
+    content: "\f7ef";
+    color: gold;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.gluten::before {
+    content: "\f7ec";
+    color: #e8cbab;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
