@@ -16,6 +16,10 @@ def get_recipes():
     return render_template("recipes.html", 
     recipes=mongo.db.recipes.find())
 
+@app.route('/add_recipe')
+def add_recipe(): 
+    return render_template("add-recipe.html", allergens=mongo.db.allergens.find(), lifestyle=mongo.db.lifestyle.find())
+
 
 if __name__ == "__main__":
     app.run(host=os.getenv("IP"), 
