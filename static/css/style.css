@@ -35,6 +35,12 @@ body {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
 }
+.pescatarians::before {
+    content: "\f578";
+    color: blue;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
 
 /* Allergens */
 
@@ -46,6 +52,18 @@ body {
 }
 .gluten::before {
     content: "\f7ec";
+    color: #e8cbab;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.nuts::before {
+    content: "\f3d6";
+    color: brown;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.shellfish::before {
+    content: "\f36b";
     color: #e8cbab;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;

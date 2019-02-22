@@ -8,14 +8,7 @@ $(document).ready(function() {
             currentLabel = currentLabel.substr(0, currentLabel.length - 1);
             $(currentList).find(".addedInputGroup").eq(i).find("label").text(currentLabel + (i + 2));
         }
-        
     });
-});
-
-$("#addRecipeForm").on("submit", function(e) {
-    e.preventDefault();
-    console.log("Stopped it");
-    return false;
 });
 
 function add_ingredient() {
