@@ -2,7 +2,7 @@
 <h3>Add a recipe</h3>
 <br/>
 <div class="row">
-    <form action="{{ url_for('add_recipe') }}" method="POST"  class="col-xs-12 col-sm-8 col-sm-offset-2">
+    <form id="addRecipeForm" action="{{ url_for('insert_recipe') }}" method="POST" class="col-xs-12 col-sm-8 col-sm-offset-2">
         <div class="row">
             <div class="form-group col-sm-12">
                 <label for="name">Name:</label>
@@ -21,9 +21,9 @@
             <hr/>
             <div class="form-group col-sm-12">
                 <label for="sel1">Suitable for:</label>
-                <select class="form-control" id="lifestyle">
+                <select class="form-control" name="lifestyle" value="carnivores" id="lifestyle">
                     {% for lifestyle in lifestyle %} 
-                        <option>{{ lifestyle.lifestyle_name }}</option>
+                        <option value="{{ lifestyle.lifestyle_name }}">{{ lifestyle.lifestyle_name }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -33,7 +33,7 @@
                 {% for allergen in allergens %}
                     <label>
                         {{ allergen.allergen_name }}
-                        <input id="{{ allergen.allergen_name }}" name="{{ allergen.allergen_name }}" type="checkbox" class="form-control">
+                        <input id="{{ allergen.allergen_name }}" name="checkbox{{ allergen.allergen_name }}" type="checkbox" class="form-control">
                     </label>
                 {% endfor %}
             </div>
@@ -41,7 +41,7 @@
                 <label>Ingredients:</label>
                 <div id="ingredientsList">
                     <label class="stepLabel" for="instruction1">Ingredient 1</label>
-                    <input id="ingredient1" name="ingredient1" type="text" class="form-control" required>    
+                    <input id="ingredient1" name="ingredient1" type="text" class="form-control addIngredient" required>    
                 </div>
                 <button id="addIngredient" type="button" class="btn btn-info" onclick="add_ingredient()">Add another ingredient</button>
             </div>
